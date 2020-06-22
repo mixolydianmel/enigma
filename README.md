@@ -1,6 +1,8 @@
 # Enigma
 > 🎮 A game engine written in C++ using modern OpenGL
 
+<img src="screenshots/basic_cube_and_light.png" alt="example" width="250"/>
+
 ## Purpose
 The general purpose of this project started out as a way to learn OpenGL and C++, but has graduated into a more extensive project. While the project may not be maintained to the highest degree, I will be pushing updates regulary, adding features and functionality to flesh out the engine. Right now, however, I will be treating this as a way to experiment with the more advanced features of OpenGL and abstract them to learn about game engine development.
 
