@@ -1,8 +1,8 @@
 #include "Shader.hh"
 
 Shader::Shader(const std::string& filepath) :
-    m_filepath(filepath),
-    m_rendererID(0)
+    m_rendererID(0),
+    m_filepath(filepath)
 {
     m_rendererID = createShader(filepath);
 }

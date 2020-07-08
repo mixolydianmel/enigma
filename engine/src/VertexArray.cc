@@ -56,6 +56,7 @@ unsigned int VertexArray::getSizeOfAttribute(VertexAttribute& attrib) const
 	break;
     case GL_DOUBLE:
 	typeSize = sizeof(double);
+        break;
     default:
         typeSize = 0;
 	break;
@@ -75,7 +76,7 @@ void VertexArray::setPointers() const
 {
     VertexAttribute currentAttrib = m_attributes.at(0);
     size_t currentOffset = 0;
-    for (int i = 0; i < m_attributes.size(); i++)
+    for (size_t i = 0; i < m_attributes.size(); i++)
     {
 	currentAttrib = m_attributes.at(i);
 
