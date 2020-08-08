@@ -47,7 +47,6 @@ If you want to contact me (for whatever reason), my contact info is here:
 |-----------|--------------------------------------|
 | Email     | cadenhenrich [at] gmail [period] com |
 | Discord   | Nohmayne [hash] 7227                 |
-| Instagram | [at] am_cursed                       |
 
 ### License
 
