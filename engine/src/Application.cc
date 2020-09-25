@@ -1,6 +1,7 @@
 #include "Manager.hh"
 #include "objects/Cube.hh"
 #include "objects/Plane.hh"
+#include <cstdio>
 
 int main(void)
 {
@@ -28,6 +29,9 @@ int main(void)
 
     // Make a cube
     Cube* cb = new Cube(OBJECT_COLOR_LIT, glm::vec3(1.f, 0.3f, 0.3f));
+
+    /* TEMPORARY */
+    printf("Ignore following warnings about \"light.diffuse\"\n");
 
     // Set cube lighting uniforms
     cb->bindAll();
