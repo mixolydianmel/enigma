@@ -10,7 +10,7 @@ int main(void)
 
     // GL handler
     Renderer rnd;
-    rnd.setClearColor(0.16f, 0.16f, 0.16f);
+    rnd.setClearColor(0.5f, 0.5f, 0.5f);
 
     // Communicator and game manager
     Manager m(rnd, wm);
@@ -27,11 +27,11 @@ int main(void)
     lightSource->translate({0.75f, 1.f, 1.5f});
     lightSource->scale({0.1f, 0.1f, 0.1f});
 
-    // Make a cube
-    Cube* cb = new Cube(OBJECT_COLOR_LIT, glm::vec3(1.f, 0.3f, 0.3f));
-
     /* TEMPORARY */
     printf("Ignore following warnings about \"light.diffuse\"\n");
+
+    // Make a cube
+    Cube* cb = new Cube(OBJECT_COLOR_LIT, glm::vec3(1.f, 0.3f, 0.3f));
 
     // Set cube lighting uniforms
     cb->bindAll();
@@ -48,7 +48,7 @@ int main(void)
     cb->getSHD().setUniform1f("material.metallic", 0.6f);
 
     // Make a plane
-    Plane* pl = new Plane(OBJECT_COLOR_LIT, glm::vec3(0.25f, 0.25f, 0.25f));
+    Plane* pl = new Plane(OBJECT_COLOR_LIT, glm::vec3(0.8f, 0.8f, 0.8f));
     pl->translate({0.f, -0.75f, 0.f});
     pl->rotate({-90.f, 1.f, 0.f, 0.f});
     pl->scale({10.f, 10.f, 1.f});
@@ -62,7 +62,7 @@ int main(void)
     pl->getSHD().setUniform3f("viewPos", cam->getPosition());
 
     // Set plane material uniforms
-    pl->getSHD().setUniform3f("material.ambient", 0.5f, 0.5f, 0.5f);
+    pl->getSHD().setUniform3f("material.ambient", 0.05f, 0.05f, 0.05f);
     pl->getSHD().setUniform3f("material.diffuse", 0.5f, 0.5f, 0.5f);
     pl->getSHD().setUniform3f("material.specular", 0.7f, 0.7f, 0.7f);
     pl->getSHD().setUniform1f("material.metallic", 0.078125f);
