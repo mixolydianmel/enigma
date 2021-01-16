@@ -63,8 +63,9 @@ void main()
     vec3 diffuse = light.specular * (diffuseStrength * material.diffuse);
 
     vec3 viewDir = normalize(viewPos - FragPos);
-    vec3 reflectDir = reflect(-lightDir, norm);
-    float spec = pow(max(dot(viewDir, reflectDir), 0.0), material.metallic * 128);
+    // vec3 reflectDir = reflect(-lightDir, norm);
+    vec3 halfwayDir = normalize(lightDir + viewDir);
+    float spec = pow(max(dot(norm, halfwayDir), 0.0), material.metallic * 128);
     vec3 specular = light.specular * (material.specular * spec);
 
     vec3 result = (ambient + diffuse + specular) * uColor;

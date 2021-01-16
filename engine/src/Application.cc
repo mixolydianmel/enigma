@@ -1,6 +1,7 @@
 #include "Manager.hh"
 #include "objects/Cube.hh"
 #include "objects/Plane.hh"
+#include <cstdint>
 #include <cstdio>
 
 int main(void)
@@ -10,7 +11,7 @@ int main(void)
 
     // GL handler
     Renderer rnd;
-    rnd.setClearColor(0.5f, 0.5f, 0.5f);
+    rnd.setClearColor(0.1568f, 0.1647f, 0.2117f);
 
     // Communicator and game manager
     Manager m(rnd, wm);
