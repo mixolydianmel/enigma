@@ -4,7 +4,6 @@
 ## Graphics
 + Directional
 + Multiple lights
-+ Blinn-Phong
 + Shadow mapping
 + Point shadows
 

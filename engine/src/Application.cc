@@ -24,22 +24,19 @@ int main(void)
     m.setAspectRatio(1.f * wm.getWidth() / wm.getHeight());
 
     // Make a light source
-    Cube* lightSource = new Cube(OBJECT_COLOR_UNLIT, glm::vec3(1.f, 1.f, 1.f));
+    Cube* lightSource = new Cube(OBJECT_COLOR_UNLIT, glm::vec3(0.9f, 0.9f, 0.8f));
     lightSource->translate({0.75f, 1.f, 1.5f});
     lightSource->scale({0.1f, 0.1f, 0.1f});
-
-    /* TEMPORARY */
-    printf("Ignore following warnings about \"light.diffuse\"\n");
 
     // Make a cube
     Cube* cb = new Cube(OBJECT_COLOR_LIT, glm::vec3(1.f, 0.3f, 0.3f));
 
     // Set cube lighting uniforms
     cb->bindAll();
-    cb->getSHD().setUniform3f("light.ambient", lightSource->getColor() * 0.2f);
-    cb->getSHD().setUniform3f("light.diffuse", lightSource->getColor() * 0.5f);
-    cb->getSHD().setUniform3f("light.specular", lightSource->getColor());
-    cb->getSHD().setUniform3f("light.position", lightSource->getPosition());
+    cb->getSHD().setUniform3f("pointLight.ambient", lightSource->getColor() * 0.2f);
+    cb->getSHD().setUniform3f("pointLight.diffuse", lightSource->getColor() * 0.5f);
+    cb->getSHD().setUniform3f("pointLight.specular", lightSource->getColor());
+    cb->getSHD().setUniform3f("pointLight.position", lightSource->getPosition());
     cb->getSHD().setUniform3f("viewPos", cam->getPosition());
 
     // Set cube material uniforms
@@ -56,10 +53,10 @@ int main(void)
 
     // Set plane lighting uniforms
     pl->bindAll();
-    pl->getSHD().setUniform3f("light.ambient", lightSource->getColor() * 0.2f);
-    pl->getSHD().setUniform3f("light.diffuse", lightSource->getColor() * 0.5f);
-    pl->getSHD().setUniform3f("light.specular", lightSource->getColor());
-    pl->getSHD().setUniform3f("light.position", lightSource->getPosition());
+    pl->getSHD().setUniform3f("pointLight.ambient", lightSource->getColor() * 0.2f);
+    pl->getSHD().setUniform3f("pointLight.diffuse", lightSource->getColor() * 0.5f);
+    pl->getSHD().setUniform3f("pointLight.specular", lightSource->getColor());
+    pl->getSHD().setUniform3f("pointLight.position", lightSource->getPosition());
     pl->getSHD().setUniform3f("viewPos", cam->getPosition());
 
     // Set plane material uniforms

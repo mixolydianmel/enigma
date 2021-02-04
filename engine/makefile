@@ -21,3 +21,6 @@ install: all
 
 debug: all
 	gdb ${TARGET}
+
+run: all
+	./${TARGET}
