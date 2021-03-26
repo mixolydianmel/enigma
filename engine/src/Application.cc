@@ -7,7 +7,7 @@
 int main(void)
 {
     // GLFW handler
-    WindowManager wm(1280, 720, "OpenGL");
+    WindowManager wm(2560, 1440, "OpenGL");
 
     // GL handler
     Renderer rnd;
@@ -24,7 +24,7 @@ int main(void)
     m.setAspectRatio(1.f * wm.getWidth() / wm.getHeight());
 
     // Make a light source
-    Cube* lightSource = new Cube(OBJECT_COLOR_UNLIT, glm::vec3(0.9f, 0.9f, 0.8f));
+    Cube* lightSource = new Cube(OBJECT_COLOR_UNLIT, glm::vec3(1.0f, 1.0f, 1.0f));
     lightSource->translate({0.75f, 1.f, 1.5f});
     lightSource->scale({0.1f, 0.1f, 0.1f});
 
