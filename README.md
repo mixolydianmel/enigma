@@ -39,7 +39,6 @@ Currently the entire project is directory-dependent, and the file structure must
 The `src/Application.cc` file contains most of what you need to learn how to use the engine, but a more detailed guide will eventually be available on the wiki of this repo.
 
 ## About
-
 If you want to contact me (for whatever reason), my contact info is here:
 
 | Type      | Information                          |
@@ -50,4 +49,3 @@ If you want to contact me (for whatever reason), my contact info is here:
 ### License
 
 This project is licenced under `GNU GPLv3`. See the `LICENSE` file for further information.
-This license is a very common license for projects of this nature.
